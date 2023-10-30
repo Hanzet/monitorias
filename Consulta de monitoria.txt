@@ -1,0 +1,1 @@
+SELECT hora_inicio, hora_fin, valor_hora, ((HOUR(TIMEDIFF(RN.hora_inicio, RN.hora_fin)) + (MINUTE(TIMEDIFF(RN.hora_inicio, RN.hora_fin)) / 60)) * VM.valor_hora) AS total_a_pagar FROM `registro_novedades` AS RN INNER JOIN valor_monitoria AS VM ON RN.valor_hora_id = VM.id
